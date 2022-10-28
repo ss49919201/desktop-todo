@@ -2,7 +2,7 @@ import './style.css';
 import './app.css';
 
 import logo from './assets/images/logo-universal.png';
-import {Greet} from '../wailsjs/go/main/App';
+import { Greet } from '../wailsjs/go/main/App';
 
 document.querySelector('#app').innerHTML = `
     <img id="logo" class="logo">
@@ -32,7 +32,7 @@ window.greet = function () {
         Greet(name)
             .then((result) => {
                 // Update result with data back from App.Greet()
-                resultElement.innerText = result;
+                resultElement.innerText = `😌${result}😌`;
             })
             .catch((err) => {
                 console.error(err);
